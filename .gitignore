@@ -1,5 +1,4 @@
-# Dữ liệu và Model (nếu chúng quá lớn)
-/data/
+# Dữ liệu và Model
 /saved_model/
 
 # Môi trường ảo
