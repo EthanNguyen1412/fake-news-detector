@@ -1,0 +1,14 @@
+# Dữ liệu và Model (nếu chúng quá lớn)
+/data/
+/saved_model/
+
+# Môi trường ảo
+/venv/
+/.venv/
+/env/
+/.env/
+/ENV/
+
+# Thư mục cache của Python
+__pycache__/
+*.pyc
