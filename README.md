@@ -1,29 +1,26 @@
 🔎 AI Fake News Detector with LIME Explanations
-This is a web application built with Python and Streamlit to classify English news articles as Real or Fake. The project's key feature is its use of LIME (Local Interpretable Model-agnostic Explanations) to provide visual explanations, helping users understand the reasoning behind the AI's predictions.
 
-✨ Key Features
-News Classification: Utilizes a Scikit-learn PassiveAggressiveClassifier model to classify text.
+This is a web application built with Python and Streamlit to classify English news articles as **Real** or **Fake**. The project's key feature is its use of LIME (Local Interpretable Model-agnostic Explanations) to provide visual explanations, helping users understand the reasoning behind the AI's predictions.
 
-AI Explainability (XAI): Integrates the LIME library to highlight the keywords that most influence the prediction outcome, enhancing model transparency.
+## ✨ Key Features
 
-Interactive UI: A user-friendly and interactive web interface built with Streamlit.
+  * **News Classification**: Utilizes a Scikit-learn `PassiveAggressiveClassifier` model to classify text.
+  * **AI Explainability (XAI)**: Integrates the LIME library to highlight the keywords that most influence the prediction outcome, enhancing model transparency.
+  * **Interactive UI**: A user-friendly and interactive web interface built with Streamlit.
+  * **Train & Save**: The model training pipeline is provided in a Jupyter Notebook (`Model_Training.ipynb`), and the trained objects (model and vectorizer) are saved using Pickle.
 
-Train & Save: The model training pipeline is provided in a Jupyter Notebook (Model_Training.ipynb), and the trained objects (model and vectorizer) are saved using Pickle.
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
-Language: Python
+  * **Language**: Python
+  * **Web Framework**: Streamlit
+  * **Machine Learning**: Scikit-learn
+  * **Data Processing**: Pandas, Numpy
+  * **Model Interpretation**: LIME
+  * **Notebook Environment**: Jupyter
 
-Web Framework: Streamlit
+## 📁 Project Structure
 
-Machine Learning: Scikit-learn
-
-Data Processing: Pandas, Numpy
-
-Model Interpretation: LIME
-
-Notebook Environment: Jupyter
-
-📁 Project Structure
+```
 .
 ├── data/
 │   ├── True.csv
@@ -35,34 +32,35 @@ Notebook Environment: Jupyter
 ├── app.py
 ├── requirements.txt
 └── README.md
-data/: Contains the original dataset used for training.
+```
 
-saved_model/: Stores the trained model and vectorizer objects.
+  * `data/`: Contains the original dataset used for training.
+  * `saved_model/`: Stores the trained model and vectorizer objects.
+  * `Model_Training.ipynb`: The Jupyter Notebook for data preprocessing, model training, and evaluation.
+  * `app.py`: The main script containing the Streamlit application code.
+  * `requirements.txt`: A file listing the necessary Python packages.
+  * `README.md`: The file you are currently reading.
 
-Model_Training.ipynb: The Jupyter Notebook for data preprocessing, model training, and evaluation.
+## 🚀 Setup and Usage
 
-app.py: The main script containing the Streamlit application code.
+### 1\. Prerequisites
 
-requirements.txt: A file listing the necessary Python packages.
+  * Python 3.8+ and Git must be installed.
 
-README.md: The file you are currently reading.
+### 2\. Clone the Repository
 
-🚀 Setup and Usage
-1. Prerequisites
-Python 3.8+ and Git must be installed.
-
-2. Clone the Repository
 Open your terminal and clone this repository to your local machine:
 
-Bash
-
+```bash
 git clone <your_repository_url>
 cd <repository_name>
-3. Create a Virtual Environment & Install Dependencies
+```
+
+### 3\. Create a Virtual Environment & Install Dependencies
+
 Create a virtual environment to avoid package conflicts.
 
-Bash
-
+```bash
 # Create a virtual environment
 python -m venv venv
 
@@ -71,32 +69,40 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
-Install the required packages from the requirements.txt file:
+```
 
-Bash
+Install the required packages from the `requirements.txt` file:
 
+```bash
 pip install -r requirements.txt
-(If you do not have a requirements.txt file, create one with the following content):
+```
 
-Plaintext
+*(If you do not have a `requirements.txt` file, create one with the following content):*
 
+```txt
 pandas
 numpy
 scikit-learn
 streamlit
 lime
-4. Train the Model
-Open and run all cells in the Model_Training.ipynb notebook using Jupyter Notebook or VS Code.
+```
 
-Bash
+### 4\. Train the Model
 
+Open and run all cells in the `Model_Training.ipynb` notebook using Jupyter Notebook or VS Code.
+
+```bash
 jupyter notebook Model_Training.ipynb
-This process will generate the saved_model/ directory containing model.pkl and vectorizer.pkl.
+```
 
-5. Run the Web Application
+This process will generate the `saved_model/` directory containing `model.pkl` and `vectorizer.pkl`.
+
+### 5\. Run the Web Application
+
 Once the model has been trained and saved, launch the Streamlit application:
 
-Bash
-
+```bash
 streamlit run app.py
-Open your web browser and navigate to http://localhost:8501 to start using the app.
+```
+
+Open your web browser and navigate to `http://localhost:8501` to start using the app.
