@@ -52,8 +52,8 @@ This is a web application built with Python and Streamlit to classify English ne
 Open your terminal and clone this repository to your local machine:
 
 ```bash
-git clone <your_repository_url>
-cd <repository_name>
+git clone https://github.com/EthanNguyen1412/fake-news-detector.git
+cd fake-news-detector
 ```
 
 ### 3\. Create a Virtual Environment & Install Dependencies
